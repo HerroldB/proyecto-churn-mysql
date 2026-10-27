@@ -1,0 +1,63 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1120" height="690" viewBox="0 0 1120 690">
+  <rect width="1120" height="690" fill="#ffffff"/>
+  <text x="560" y="38" text-anchor="middle" font-family="Arial, sans-serif" font-size="24" font-weight="bold" fill="#183153">Diagrama Entidad-Relación — Proyecto de churn</text>
+  <g stroke="#51708f" stroke-width="3" fill="none">
+    <path d="M310 125 H380 V210 H420"/>
+    <path d="M310 325 H365 V390 H420"/>
+    <path d="M740 230 H800 V125 H850"/>
+    <path d="M740 400 H800 V440 H850"/>
+    <path d="M310 565 H800 V490 H850"/>
+  </g>
+  <g font-family="Arial, sans-serif" fill="#183153">
+    <text x="340" y="115" font-size="15">1 : N</text>
+    <text x="340" y="315" font-size="15">1 : N</text>
+    <text x="765" y="215" font-size="15">1 : 1</text>
+    <text x="765" y="385" font-size="15">1 : N</text>
+    <text x="570" y="555" font-size="15">1 : N</text>
+  </g>
+  <g font-family="Arial, sans-serif" font-size="15">
+    <g>
+      <rect x="50" y="70" width="260" height="125" rx="10" fill="#eaf2fb" stroke="#2b5d87" stroke-width="2"/>
+      <text x="180" y="98" text-anchor="middle" font-size="19" font-weight="bold" fill="#183153">contract_types</text>
+      <text x="70" y="130" fill="#263746">PK contract_type_id</text>
+      <text x="70" y="158" fill="#263746">contract_name</text>
+    </g>
+    <g>
+      <rect x="50" y="260" width="260" height="130" rx="10" fill="#eaf2fb" stroke="#2b5d87" stroke-width="2"/>
+      <text x="180" y="290" text-anchor="middle" font-size="19" font-weight="bold" fill="#183153">payment_methods</text>
+      <text x="70" y="325" fill="#263746">PK payment_method_id</text>
+      <text x="70" y="353" fill="#263746">method_name</text>
+    </g>
+    <g>
+      <rect x="420" y="155" width="320" height="320" rx="10" fill="#eff8f1" stroke="#3b7b50" stroke-width="2"/>
+      <text x="580" y="185" text-anchor="middle" font-size="20" font-weight="bold" fill="#183153">customers</text>
+      <text x="445" y="220" fill="#263746">PK customer_id</text>
+      <text x="445" y="248" fill="#263746">gender, senior_citizen</text>
+      <text x="445" y="276" fill="#263746">partner, dependents</text>
+      <text x="445" y="304" fill="#263746">tenure_months, churn</text>
+      <text x="445" y="332" fill="#263746">FK contract_type_id</text>
+      <text x="445" y="360" fill="#263746">FK payment_method_id</text>
+      <text x="445" y="403" fill="#52636f">Datos generales: una fila por cliente</text>
+    </g>
+    <g>
+      <rect x="850" y="70" width="240" height="125" rx="10" fill="#fff5e8" stroke="#a56c24" stroke-width="2"/>
+      <text x="970" y="100" text-anchor="middle" font-size="19" font-weight="bold" fill="#183153">billing_summary</text>
+      <text x="870" y="135" fill="#263746">PK/FK customer_id</text>
+      <text x="870" y="163" fill="#263746">monthly / total charges</text>
+    </g>
+    <g>
+      <rect x="50" y="500" width="260" height="130" rx="10" fill="#eaf2fb" stroke="#2b5d87" stroke-width="2"/>
+      <text x="180" y="530" text-anchor="middle" font-size="19" font-weight="bold" fill="#183153">service_catalog</text>
+      <text x="70" y="565" fill="#263746">PK service_id</text>
+      <text x="70" y="593" fill="#263746">service_name</text>
+    </g>
+    <g>
+      <rect x="850" y="350" width="240" height="180" rx="10" fill="#f4effa" stroke="#725294" stroke-width="2"/>
+      <text x="970" y="382" text-anchor="middle" font-size="19" font-weight="bold" fill="#183153">customer_services</text>
+      <text x="870" y="418" fill="#263746">PK/FK customer_id</text>
+      <text x="870" y="446" fill="#263746">PK/FK service_id</text>
+      <text x="870" y="474" fill="#263746">service_value</text>
+      <text x="870" y="506" fill="#52636f">Una fila por servicio</text>
+    </g>
+  </g>
+</svg>
